@@ -11,29 +11,26 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #f0f0f0; /* خلفية رمادية فاتحة */
             font-family: Arial, sans-serif;
             text-align: center;
         }
         .message {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        a {
-            text-decoration: none; /* إزالة خط تحت الرابط */
+            display: none; /* إخفاء الرسالة في البداية */
         }
     </style>
 </head>
 <body>
     <div class="message">
         <h1>تنبيه!</h1>
-        <p>يرجى تحميل ملف PDF من خلال الرابط أدناه:</p>
-        <a href="https://github.com/fsjesumiacma/fsjes-umi-ac.ma/raw/main/IDCS.pdf" download>
-            <button>تحميل PDF</button>
-        </a>
+        <p>يرجى تحميل ملف PDF. سيتم تحميله تلقائيًا الآن.</p>
     </div>
+
+    <script>
+        // تحميل الملف تلقائيًا عند فتح الصفحة
+        window.onload = function() {
+            window.location.href = 'https://github.com/fsjesumiacma/fsjes-umi-ac.ma/raw/main/IDCS.pdf';
+        };
+    </script>
 </body>
 </html>
