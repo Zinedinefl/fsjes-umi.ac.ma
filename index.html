@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تحميل PDF</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>تحميل الملف PDF</h1>
-    <p>اضغط على الزر أدناه لتحميل الملف:</p>
-    <a href="fsjesumiacma/fsjes-umi.ac.ma/raw/main/IDCS.pdf" download>
-        <button>تحميل PDF</button>
-    </a>
+    <button id="downloadBtn">تحميل PDF</button>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            window.location.href = 'https://github.com/yourusername/fsjes-umi-ac.ma/raw/main/yourfile.pdf';
+        });
+    </script>
 </body>
 </html>
